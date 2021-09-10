@@ -2,12 +2,12 @@
 /* exported data */
 var $title = document.querySelector('#title');
 var $notes = document.querySelector('#notes');
-
+var $imageUrl = document.querySelector('.image');
 var $photo = document.querySelector('#photo-url');
 $photo.addEventListener('input', inputfunc);
 
 function inputfunc(event) {
-  $photo.setAttribute('src', event.target.value);
+  $imageUrl.setAttribute('src', event.target.value);
 
 }
 
@@ -27,7 +27,7 @@ function formFunc(event) {
 
   data.entries.unshift(obj);
   data.nextEntryId++;
-  $photo.setAttribute('src', './images/placeholder-image-square.jpg');
+  $imageUrl.setAttribute('src', './images/placeholder-image-square.jpg');
   $form.reset();
 
 }
